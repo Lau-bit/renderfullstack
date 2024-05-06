@@ -6,7 +6,7 @@ app.listen(PORT, () => {
 })
 const cors = require("cors");
 app.use(cors())
-app.use(express.static("./dist"));
+app.use(express.static("../frontend/dist"));
 
 
 let notes = [
