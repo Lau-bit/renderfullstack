@@ -1,11 +1,16 @@
 const express = require('express')
 const app = express()
+const path = require('path');
+const distPath = path.join(__dirname, 'dist');
+console.log(`Serving static files from ${distPath}`);
+console.log("geqgeqg")
+
 app.use(express.static('dist'))
 
 let notes = [
   {
     id: 1,
-    content: "HTML is easy",
+    content: "HTML is easyz",
     important: true
   },
   {
