@@ -3,7 +3,6 @@ const app = express()
 const path = require('path');
 const distPath = path.join(__dirname, 'dist');
 console.log(`Serving static files from ${distPath}`);
-console.log("geqgeqg")
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
