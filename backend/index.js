@@ -48,7 +48,7 @@ const unknownEndpoint = (request, response) => {
 }
 
 app.get('/', (request, response) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+  response.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 })
 
 app.get('/api/notes', (request, response) => {
