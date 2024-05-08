@@ -5,12 +5,13 @@ const distPath = path.join(__dirname, 'dist');
 console.log(`Serving static files from ${distPath}`);
 console.log("geqgeqg")
 
-app.use(express.static('dist'))
+app.use(express.static(path.join(__dirname, 'dist')));
+
 
 let notes = [
   {
     id: 1,
-    content: "HTML is easyz",
+    content: "HTML is easy",
     important: true
   },
   {
@@ -47,7 +48,7 @@ const unknownEndpoint = (request, response) => {
 }
 
 app.get('/', (request, response) => {
-  response.send('<h1>Hello World!</h1>')
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 })
 
 app.get('/api/notes', (request, response) => {
